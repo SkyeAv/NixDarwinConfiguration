@@ -80,6 +80,7 @@ in {
   system.primaryUser = "skyeav";
   # SYSTEM PACKAGES
   environment.systemPackages = (with pkgs; [
+    podman-compose
     podman-desktop
     claude-code
     fastfetch
@@ -94,6 +95,7 @@ in {
     unzip
     cmake
     ninja
+    dust
     tmux
     htop
     curl
@@ -131,11 +133,13 @@ in {
       programs.zsh = {
         enable = true;
         shellAliases = {
-          darwin-rebuild = "darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
+          os-rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
           docker = "podman";
           top = "htop";
           vim = "nvim";
+          du = "dust";
           vi = "nvim";
+          df = "duf";
           ls = "eza";
           cd = "z";
         };
