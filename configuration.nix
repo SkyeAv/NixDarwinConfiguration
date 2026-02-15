@@ -44,6 +44,12 @@ in {
   homebrew = {
     enable = true;
     onActivation.cleanup = "uninstall";
+    taps = [
+      "steipete/tap"
+    ];
+    brews = [
+      "gogcli"
+    ];
     casks = [
       "visual-studio-code"
       "bitwarden"
@@ -143,6 +149,10 @@ in {
           ls = "eza";
           cd = "z";
         };
+        initContent = ''
+          # Add Homebrew to PATH
+          export PATH="/opt/homebrew/bin:$PATH"
+        '';
       };
       # ZOXIDE
       programs.zoxide = {
