@@ -98,6 +98,7 @@ in {
     neovim
     ffmpeg
     libzip
+    rsync
     unzip
     cmake
     ninja
@@ -120,6 +121,7 @@ in {
     lua
     fd
     gh
+    jq
   ]) ++ [(pkgs.python313.withPackages (ps: with ps; [
     setuptools
     playwright
@@ -129,6 +131,8 @@ in {
   ]))] ++ (with np; [
     nodejs
   ]);
+  # DIRENV ENABLE
+  programs.direnv.enable = true;
   # HOME MANAGER
   home-manager = {
     useGlobalPkgs = true;
