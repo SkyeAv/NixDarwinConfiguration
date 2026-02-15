@@ -45,14 +45,17 @@ in {
     enable = true;
     onActivation.cleanup = "uninstall";
     taps = [
+      "yakitrak/yakitrak"
       "steipete/tap"
     ];
     brews = [
+      "obsidian-cli"
       "gogcli"
     ];
     casks = [
       "visual-studio-code"
       "bitwarden"
+      "obsidian"
     ];
   };
   # SYSTEM SETTINGS
@@ -102,6 +105,7 @@ in {
     unzip
     cmake
     ninja
+    macpm
     dust
     tmux
     htop
@@ -144,6 +148,7 @@ in {
         enable = true;
         shellAliases = {
           os-rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
+          ssh-skyetop = "ssh skyeav@192.168.1.13";
           docker = "podman";
           top = "htop";
           vim = "nvim";
