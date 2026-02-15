@@ -13,7 +13,7 @@
       systems = ["aarch64-darwin"];
       flake = {
         darwinConfigurations.skyeav = nix-darwin.lib.darwinSystem {
-          system = "aarch64-darwin"; # or "x86_64-darwin" for Intel Macs
+          system = "aarch64-darwin";
           specialArgs = {inherit inputs;};
           modules = [
             home-manager.darwinModules.home-manager
