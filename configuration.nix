@@ -91,11 +91,13 @@ in {
   environment.systemPackages = (with pkgs; [
     podman-compose
     podman-desktop
+    antigravity
     claude-code
     fastfetch
     opencode
     nix-diff
     ripgrep
+    pyright
     podman
     zoxide
     neovim
@@ -106,6 +108,7 @@ in {
     cmake
     ninja
     macpm
+    file
     dust
     tmux
     htop
@@ -124,8 +127,10 @@ in {
     bun
     lua
     fd
+    go
     gh
     jq
+    uv
   ]) ++ [(pkgs.python313.withPackages (ps: with ps; [
     setuptools
     playwright
@@ -134,7 +139,10 @@ in {
     pip
   ]))] ++ (with np; [
     nodejs
-  ]);
+  ]) ++ [(pkgs.writeShellScriptBin "opencode" ''
+    export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+    exec ${pkgs.opencode}/bin/opencode "$@"
+  '')];
   # DIRENV ENABLE
   programs.direnv.enable = true;
   # HOME MANAGER
