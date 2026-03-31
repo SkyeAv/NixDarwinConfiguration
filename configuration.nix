@@ -1,8 +1,6 @@
 {pkgs, inputs, lib, config, ...}:
 let
   code-extensions = pkgs.vscode-extensions;
-  py = pkgs.python313Packages;
-  np = pkgs.nodePackages;
 in {
   # ENABLE SUBSITUTERS
   nix.settings = {
