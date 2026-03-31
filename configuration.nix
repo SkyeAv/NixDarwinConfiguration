@@ -44,18 +44,8 @@ in {
   homebrew = {
     enable = true;
     onActivation.cleanup = "uninstall";
-    taps = [
-      "yakitrak/yakitrak"
-      "steipete/tap"
-    ];
-    brews = [
-      "obsidian-cli"
-      "gogcli"
-    ];
     casks = [
-      "visual-studio-code"
       "bitwarden"
-      "obsidian"
     ];
   };
   # SYSTEM SETTINGS
@@ -88,13 +78,12 @@ in {
   # PRIMARY USER
   system.primaryUser = "skyeav";
   # SYSTEM PACKAGES
-  environment.systemPackages = (with pkgs; [
+  environment.systemPackages = with pkgs; [
     podman-compose
     podman-desktop
-    antigravity
-    claude-code
     fastfetch
-    opencode
+    python314
+    nodejs_24
     nix-diff
     ripgrep
     pyright
@@ -131,18 +120,7 @@ in {
     gh
     jq
     uv
-  ]) ++ [(pkgs.python313.withPackages (ps: with ps; [
-    setuptools
-    playwright
-    wheel
-    pipx
-    pip
-  ]))] ++ (with np; [
-    nodejs
-  ]) ++ [(pkgs.writeShellScriptBin "opencode" ''
-    export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib''${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-    exec ${pkgs.opencode}/bin/opencode "$@"
-  '')];
+  ];
   # DIRENV ENABLE
   programs.direnv.enable = true;
   # HOME MANAGER
