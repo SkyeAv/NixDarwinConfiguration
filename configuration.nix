@@ -91,6 +91,7 @@ in {
     neovim
     ffmpeg
     libzip
+    kitty
     rsync
     unzip
     cmake
