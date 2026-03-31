@@ -79,6 +79,7 @@ in {
   environment.systemPackages = with pkgs; [
     podman-compose
     podman-desktop
+    alacritty
     fastfetch
     python314
     nodejs_24
