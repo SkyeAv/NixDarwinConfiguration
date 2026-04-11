@@ -104,7 +104,6 @@ in
     macpm
     file
     dust
-    tmux
     htop
     curl
     wget
