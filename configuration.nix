@@ -129,8 +129,8 @@ in {
       programs.zsh = {
         enable = true;
         shellAliases = {
-          os-rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
-          ssh-skyetop = "ssh skyeav@192.168.1.13";
+          rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
+          skyetop = "ssh skyeav@192.168.1.13";
           docker = "podman";
           top = "htop";
           vim = "nvim";
