@@ -1,7 +1,14 @@
-{pkgs, inputs, lib, config, ...}:
+{
+  pkgs,
+  inputs,
+  lib,
+  config,
+  ...
+}:
 let
   code-extensions = pkgs.vscode-extensions;
-in {
+in
+{
   # ENABLE SUBSITUTERS
   nix.settings = {
     max-jobs = "auto";
@@ -75,10 +82,12 @@ in {
   environment.systemPackages = with pkgs; [
     podman-compose
     podman-desktop
+    claude-code
     alacritty
     fastfetch
     python314
     nodejs_24
+    opencode
     nix-diff
     ripgrep
     pyright
