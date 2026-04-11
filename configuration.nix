@@ -125,8 +125,6 @@ in
     jq
     uv
   ];
-  # DIRENV ENABLE
-  programs.direnv.enable = true;
   # HOME MANAGER
   home-manager = {
     useGlobalPkgs = true;
@@ -148,8 +146,8 @@ in
           ls = "eza";
           cd = "z";
         };
-        initContent = ''
-          # Add Homebrew to PATH
+        initContent = lib.mkBefore ''
+          export ZSH="${pkgs.oh-my-zsh}/share/oh-my-zsh"
           export PATH="/opt/homebrew/bin:$PATH"
         '';
         # Oh my zsh configuration
@@ -163,8 +161,13 @@ in
         };
         history.size = 100;
       };
-      # ZOXIDE
+      # Zoxide
       programs.zoxide = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+      # Direnv integration
+      direnv = {
         enable = true;
         enableZshIntegration = true;
       };
