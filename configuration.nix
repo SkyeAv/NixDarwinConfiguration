@@ -126,10 +126,6 @@
     useUserPackages = true;
     users.skyeav = {
       home.stateVersion = "24.11";
-      home.sessionPath = [
-        "$HOME/.local/bin"
-        "$HOME/go/bin"
-      ];
       # ZSH CONFIG
       programs.zsh = {
         enable = true;
@@ -147,6 +143,8 @@
         };
         initContent = lib.mkBefore ''
           export ZSH="${pkgs.oh-my-zsh}/share/oh-my-zsh"
+          export PATH="/users/skyeav/.local/bin:$PATH"
+          export PATH="/users/skyeav/go/bin:$PATH"
           export PATH="/opt/homebrew/bin:$PATH"
         '';
         # Oh my zsh configuration
