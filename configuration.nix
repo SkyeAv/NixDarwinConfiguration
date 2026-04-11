@@ -126,6 +126,10 @@
     useUserPackages = true;
     users.skyeav = {
       home.stateVersion = "24.11";
+      home.sessionPath = [
+        "$HOME/.local/bin"
+        "$HOME/go/bin"
+      ];
       # ZSH CONFIG
       programs.zsh = {
         enable = true;
