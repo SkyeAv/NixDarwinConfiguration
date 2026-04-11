@@ -167,7 +167,7 @@ in
         enableZshIntegration = true;
       };
       # Direnv integration
-      direnv = {
+      programs.direnv = {
         enable = true;
         enableZshIntegration = true;
       };
