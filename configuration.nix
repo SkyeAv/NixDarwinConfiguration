@@ -1,13 +1,8 @@
 {
   pkgs,
-  inputs,
   lib,
-  config,
   ...
 }:
-let
-  code-extensions = pkgs.vscode-extensions;
-in
 {
   # ENABLE SUBSITUTERS
   nix.settings = {
