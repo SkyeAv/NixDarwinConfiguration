@@ -102,14 +102,6 @@
             base_keymap = "VSCode";
           };
         };
-        # Neovim configuration
-        neovim = {
-          enable = true;
-          viAlias = true;
-          vimAlias = true;
-          withRuby = false;
-          withPython3 = false;
-        };
         # Kitty configuration
         kitty = {
           enable = true;
