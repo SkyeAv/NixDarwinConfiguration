@@ -4,7 +4,7 @@
 {
   # Nix package manager settings
   nix = {
-    optimize.automatic = true;
+    optimise.automatic = true;
     settings = {
       experimental-features = [
         "nix-command"
