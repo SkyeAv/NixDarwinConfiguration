@@ -11,7 +11,6 @@
       nixfmt-tree
       ghostscript
       texliveFull
-      libreoffice
       imagemagick
       cloudflared
       python314
