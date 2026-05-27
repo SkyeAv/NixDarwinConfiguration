@@ -29,7 +29,6 @@
       libzip
       duckdb
       libgcc
-      macpm
       pdftk
       rsync
       unzip
