@@ -1,0 +1,76 @@
+{
+  pkgs,
+  ...
+}:
+{
+  # Global environment
+  environment = {
+    systemPackages = with pkgs; [
+      podman-compose
+      claude-code
+      nixfmt-tree
+      ghostscript
+      texliveFull
+      libreoffice
+      imagemagick
+      cloudflared
+      python314
+      nodejs_24
+      fastfetch
+      llama-cpp
+      opencode
+      nix-diff
+      gnumake
+      ripgrep
+      pyright
+      awscli2
+      podman
+      pandoc
+      ffmpeg
+      libzip
+      duckdb
+      libgcc
+      macpm
+      pdftk
+      rsync
+      unzip
+      cmake
+      ninja
+      procs
+      ruff
+      file
+      htop
+      curl
+      dune
+      wget
+      gawk
+      btop
+      dust
+      tree
+      prek
+      zlib
+      perl
+      nixd
+      nil
+      duf
+      fzf
+      zip
+      gcc
+      git
+      eza
+      nim
+      bat
+      bun
+      lua
+      fd
+      jq
+      go
+      gh
+      uv
+    ];
+    variables = {
+      ZSH = "${pkgs.oh-my-zsh}/share/oh-my-zsh";
+    };
+  };
+
+}
