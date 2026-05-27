@@ -71,5 +71,4 @@
       ZSH = "${pkgs.oh-my-zsh}/share/oh-my-zsh";
     };
   };
-
 }
