@@ -3,3 +3,4 @@
 *.claude/
 *.json
 *node_modules/
+*.logs/
