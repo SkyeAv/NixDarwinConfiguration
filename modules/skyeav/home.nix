@@ -102,6 +102,14 @@
             base_keymap = "VSCode";
           };
         };
+        # Neovim configuration
+        neovim = {
+          enable = true;
+          viAlias = true;
+          vimAlias = true;
+          withRuby = false;
+          withPython3 = false;
+        };
         # Kitty configuration
         kitty = {
           enable = true;
@@ -109,8 +117,6 @@
         };
         # Alacritty configuration
         alacritty.enable = true;
-        # Neovim integration
-        neovim.enable = true;
         # Tmux configuration
         tmux = {
           enable = true;

@@ -1,4 +1,5 @@
 {
+  inputs,
   ...
 }:
 {
@@ -64,4 +65,7 @@
     stateVersion = 6;
   };
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.overlays = [
+    inputs.neovim-nightly-overlay.overlays.default
+  ];
 }
