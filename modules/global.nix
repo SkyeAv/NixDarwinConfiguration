@@ -50,6 +50,7 @@
       zlib
       perl
       nixd
+      nvim
       nil
       duf
       fzf
