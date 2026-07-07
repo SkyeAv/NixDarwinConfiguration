@@ -109,6 +109,8 @@
         };
         # Alacritty configuration
         alacritty.enable = true;
+        # Neovim integration
+        nvim.enable = true;
         # Tmux configuration
         tmux = {
           enable = true;
