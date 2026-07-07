@@ -29,7 +29,6 @@
           shellAliases = {
             amphetamine = ''systemd-inhibit --what=idle:sleep --why="Presentation" sleep infinity'';
             rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
-            skyetop = "ssh skyeav@192.168.1.13";
             docker = "podman";
             zed = "zeditor";
             ps = "procs";
@@ -65,6 +64,10 @@
           enable = true;
           enableZshIntegration = true;
         };
+        # Nushell integration
+        nushell = {
+          enable = true;
+        };
         # Zed configuration
         zed-editor = {
           enable = true;
@@ -78,7 +81,6 @@
             "elixir"
             "julia"
             "latex"
-            "proto"
             "perl"
             "make"
             "toml"
@@ -86,8 +88,6 @@
             "log"
             "nim"
             "nix"
-            "lua"
-            "R"
           ];
           installRemoteServer = true;
           userSettings = {
