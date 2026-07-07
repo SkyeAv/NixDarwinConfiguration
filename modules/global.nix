@@ -35,6 +35,7 @@
       cmake
       ninja
       procs
+      nginx
       ruff
       file
       htop
