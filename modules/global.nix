@@ -59,7 +59,6 @@
       nim
       bat
       bun
-      lua
       fd
       jq
       go
