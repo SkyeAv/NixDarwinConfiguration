@@ -30,7 +30,6 @@
             amphetamine = ''systemd-inhibit --what=idle:sleep --why="Presentation" sleep infinity'';
             rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
             docker = "podman";
-            zed = "zeditor";
             ps = "procs";
             top = "htop";
             du = "dust";
@@ -67,40 +66,6 @@
         # Nushell integration
         nushell = {
           enable = true;
-        };
-        # Zed configuration
-        zed-editor = {
-          enable = true;
-          extensions = [
-            "material-icon-theme"
-            "docker-compose"
-            "github-actions"
-            "git-firefly"
-            "ayu-darker"
-            "dockerfile"
-            "elixir"
-            "julia"
-            "latex"
-            "perl"
-            "make"
-            "toml"
-            "ruff"
-            "log"
-            "nim"
-            "nix"
-          ];
-          installRemoteServer = true;
-          userSettings = {
-            theme = {
-              mode = "dark";
-              dark = "Ayu Darker";
-              light = "Ayu Darker";
-            };
-            terminal = {
-              shell = "system";
-            };
-            base_keymap = "VSCode";
-          };
         };
         # Neovim configuration
         neovim = {
