@@ -26,6 +26,9 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agent-of-empires = {
+      url = "github:agent-of-empires/agent-of-empires";
+    };
   };
   outputs =
     inputs:

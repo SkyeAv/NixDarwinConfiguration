@@ -1,11 +1,13 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 {
   # Global environment
   environment = {
     systemPackages = with pkgs; [
+      inputs.agent-of-empires.packages.${pkgs.system}.aoe-with-web
       podman-compose
       claude-code
       nixfmt-tree
