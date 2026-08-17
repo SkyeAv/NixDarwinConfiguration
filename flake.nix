@@ -29,9 +29,6 @@
     agent-of-empires = {
       url = "github:agent-of-empires/agent-of-empires";
     };
-    hermes-agent = {
-      url = "github:NousResearch/hermes-agent";
-    };
   };
   outputs =
     inputs:

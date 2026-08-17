@@ -7,8 +7,7 @@
   # Global environment
   environment = {
     systemPackages = with pkgs; [
-      inputs.agent-of-empires.packages.${pkgs.system}.aoe-with-web
-      inputs.hermes-agent.packages.${pkgs.system}.default
+      inputs.agent-of-empires.packages.${pkgs.system}.aoe-with-webault
       podman-compose
       claude-code
       nixfmt-tree

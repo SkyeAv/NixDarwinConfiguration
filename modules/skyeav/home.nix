@@ -95,15 +95,17 @@
             yank
           ];
           extraConfig = ''
-            setw -g mode-keys vi
+            set -g mode-keys vi
+            set -g extended-keys on
+            set -g allow-passthrough on
+            set -g extended-keys-format csi-u
+            set -g default-terminal "tmux-256color"
+            set -as terminal-overrides ",xterm-kitty:Tc"
+            set -as terminal-features ",xterm-kitty:RGB:hyperlinks:sixel"
+
             bind-key -T copy-mode-vi v send-keys -X begin-selection
             bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "wl-copy"
             bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "wl-copy"
-
-            set -g allow-passthrough on
-            set -g default-terminal "tmux-256color"
-            set -as terminal-features ",xterm-kitty:RGB:hyperlinks:sixel"
-            set -as terminal-overrides ",xterm-kitty:Tc"
           '';
         };
       };
