@@ -13,6 +13,7 @@
         stateVersion = "25.11";
         # Append vars to path
         sessionPath = [
+          "$HOME/.kimi-code/bin"
           "/opt/homebrew/bin"
           "$HOME/.local/bin"
           "$HOME/go/bin"

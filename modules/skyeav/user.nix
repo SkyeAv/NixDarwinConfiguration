@@ -9,4 +9,13 @@
     name = "skyeav";
     home = "/Users/skyeav";
   };
+  # HOMEBREW
+  homebrew = {
+    enable = true;
+    onActivation.cleanup = "uninstall";
+    brews = [
+      "pi-coding-agent"
+      "kimi-code"
+    ];
+  };
 }
