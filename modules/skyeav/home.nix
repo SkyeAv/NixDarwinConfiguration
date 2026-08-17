@@ -28,7 +28,6 @@
           syntaxHighlighting.enable = true;
           # Zsh aliases
           shellAliases = {
-            amphetamine = "caffeinate -dimsu";
             rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
             docker = "podman";
             ps = "procs";
