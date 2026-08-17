@@ -28,7 +28,7 @@
           syntaxHighlighting.enable = true;
           # Zsh aliases
           shellAliases = {
-            amphetamine = ''systemd-inhibit --what=idle:sleep --why="Presentation" sleep infinity'';
+            amphetamine = "caffeinate -dimsu";
             rebuild = "sudo darwin-rebuild switch --flake /etc/nix-darwin#skyeav";
             docker = "podman";
             ps = "procs";
@@ -105,8 +105,8 @@
             set -as terminal-features ",xterm-kitty:RGB:hyperlinks:sixel"
 
             bind-key -T copy-mode-vi v send-keys -X begin-selection
-            bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "wl-copy"
-            bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "wl-copy"
+            bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
+            bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
           '';
         };
       };
