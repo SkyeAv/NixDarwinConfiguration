@@ -8,6 +8,7 @@
   environment = {
     systemPackages = with pkgs; [
       inputs.agent-of-empires.packages.${pkgs.system}.aoe-with-web
+      cloudflare-warp
       rabbitmq-server
       podman-compose
       claude-code
