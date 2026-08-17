@@ -8,6 +8,7 @@
   environment = {
     systemPackages = with pkgs; [
       inputs.agent-of-empires.packages.${pkgs.system}.aoe-with-web
+      (postgresql.withPackages (ps: [ ps.pg_cron ]))
       cloudflare-warp
       rabbitmq-server
       podman-compose
@@ -17,7 +18,6 @@
       imagemagick
       cloudflared
       nats-server
-      postgresql
       python314
       nodejs_24
       fastfetch
