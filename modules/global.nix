@@ -7,14 +7,16 @@
   # Global environment
   environment = {
     systemPackages = with pkgs; [
-      inputs.agent-of-empires.packages.${pkgs.system}.aoe-with-webault
+      inputs.agent-of-empires.packages.${pkgs.system}.aoe-with-web
+      rabbitmq-server
       podman-compose
       claude-code
       nixfmt-tree
       ghostscript
-      texliveFull
       imagemagick
       cloudflared
+      nats-server
+      postgresql
       python314
       nodejs_24
       fastfetch
@@ -30,6 +32,7 @@
       ffmpeg
       libzip
       duckdb
+      redis
       macpm
       pdftk
       rsync
@@ -42,7 +45,6 @@
       file
       htop
       curl
-      dune
       wget
       gawk
       btop
@@ -52,6 +54,7 @@
       zlib
       perl
       nixd
+      mill
       nil
       duf
       fzf
@@ -59,12 +62,12 @@
       gcc
       git
       eza
-      nim
       bat
       bun
-      lua
+      jdk
       fd
       jq
+      yq
       go
       gh
       uv
